@@ -13,32 +13,30 @@ function buildMainCharacter (name, age, pronouns) {
 }
 
 function saveReview(bookReview, reviews) {
-  reviews.push(bookReview);
-  for(var i = 0; i < reviews.length; i++) {
-      if (reviews[i] === bookReview) {
-        console.log(reviews[i])
-      }
-    } reviews.length
+  reviews.length
+  if(!reviews.includes(bookReview)) {
+    reviews.push(bookReview);
   }
+}
 
 function calculatePageCount(bookTitle) {
   return (bookTitle.length) * 20;
 }
 
-function writeBook(bookTitle, protagonist) {
-  var numOfPages = 0;
+function writeBook(bookTitle, protagonist, genre = "fantasy") {
   var book = {
     title: bookTitle,
     mainCharacter: protagonist,
-    pageCount: numOfPages,
+    pageCount: calculatePageCount(bookTitle),
     genre: "fantasy",
   }
   return book;
 }
 
 function editBook(bookTitle) {
-  
-
+  var numOfPages = bookTitle.pageCount;
+  console.log(numOfPages * 0.75);
+  return numOfPages * 0.75;
 }
 
 
