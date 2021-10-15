@@ -35,8 +35,7 @@ function writeBook(bookTitle, protagonist, genre = "fantasy") {
 
 function editBook(bookTitle) {
   var numOfPages = bookTitle.pageCount;
-  console.log(numOfPages * 0.75);
-  return numOfPages * 0.75;
+  bookTitle.pageCount = numOfPages * 0.75
 }
 
 
