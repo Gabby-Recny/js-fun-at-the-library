@@ -21,8 +21,12 @@ function listTitles(genreShelf) {
   return newTitles;
 }
 
-function searchShelf() {
-
+function searchShelf(genreShelf, bookTitle) {
+  for(var i = 0; i < genreShelf.length; i++) {
+    if(genreShelf[i].title === bookTitle) {
+      return true
+    }
+  } return false 
 }
 
 
