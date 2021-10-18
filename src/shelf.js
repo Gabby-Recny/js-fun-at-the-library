@@ -16,6 +16,7 @@ function listTitles(genreShelf) {
   var titles = [];
   for(var i = 0; i < genreShelf.length; i++) {
     titles.push(genreShelf[i].title)
+    console.log(titles)
   }
   var newTitles = titles.join(', ');
   return newTitles;
@@ -26,7 +27,7 @@ function searchShelf(genreShelf, bookTitle) {
     if(genreShelf[i].title === bookTitle) {
       return true
     }
-  } return false 
+  } return false
 }
 
 
